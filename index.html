@@ -38,6 +38,23 @@ text-align: center;
 color: #777;
 margin-top: 3rem;
 }
+ .figure-row {
+  display: flex;
+  gap: 1rem;           /* space between figures */
+}
+
+.figure-row figure {
+  flex: 1;             /* each figure takes half the row */
+  text-align: center;  /* center captions */
+}
+
+.figure-row img {
+  width: 100%;         /* make image fill half page */
+  height: auto;
+  border: 1px solid #ccc; /* optional: subtle border */
+  border-radius: 4px;     /* optional: rounded corners */
+}
+
 </style>
 </head>
 <body>
