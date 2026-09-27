@@ -1,261 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="google-site-verification" content="Jev_NbAB63cJCRAbloVKGVjJa5buqXzDgKk3hiLRPN8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="index, follow">
-<title>Filipe Thewes </title>
-<style>
-body {
-font-family: Georgia, serif;
-max-width: 1000px;
-margin: 2rem auto;
-padding: 0 1rem;
-line-height: 1.6;
-color: #333;
-}
-header {
-text-align: center;
-margin-bottom: 2rem;
-}
-h1 {
-margin: 0;
-font-size: 2rem;
-}
-nav {
-margin-top: 1rem;
-}
-nav a {
-margin: 0 0.5rem;
-text-decoration: none;
-color: #0066cc;
-}
-section {
-margin-bottom: 2rem;
-}
-footer {
-font-size: 0.9rem;
-text-align: center;
-color: #777;
-margin-top: 3rem;
-}
+  <head>
+    <meta charset="UTF-8">
+    <meta name="google-site-verification" content="Jev_NbAB63cJCRAbloVKGVjJa5buqXzDgKk3hiLRPN8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>Filipe Thewes </title>
+    <style>
+      body {
+	  font-family: Georgia, serif;
+	  max-width: 1000px;
+	  margin: 2rem auto;
+	  padding: 0 1rem;
+	  line-height: 1.6;
+	  color: #333;
+      }
+      header {
+	  text-align: center;
+	  margin-bottom: 2rem;
+      }
+      h1 {
+	  margin: 0;
+	  font-size: 2rem;
+      }
+      nav {
+	  margin-top: 1rem;
+      }
+      nav a {
+	  margin: 0 0.5rem;
+	  text-decoration: none;
+	  color: #0066cc;
+      }
+      section {
+	  margin-bottom: 2rem;
+      }
+      footer {
+	  font-size: 0.9rem;
+	  text-align: center;
+	  color: #777;
+	  margin-top: 3rem;
+      }
 
-#about p {
-  text-align: justify;
-}
+      #about p {
+	  text-align: justify;
+      }
 
-/* --- SLIDESHOW STYLES --- */
-.slideshow-container {
-  max-width: 650px;
-  position: relative;
-  margin: 0 auto;
-}
+      /* --- SLIDESHOW STYLES --- */
+      .slideshow-container {
+	  max-width: 650px;
+	  position: relative;
+	  margin: 0 auto;
+      }
 
-.slide {
-  display: none; /* Hidden by default */
-  text-align: center;
-}
+      .slide {
+	  display: none; /* Hidden by default */
+	  text-align: center;
+      }
 
-.slide img {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
+      .slide img {
+	  width: 100%;
+	  max-width: 600px;
+	  height: auto;
+	  border: 1px solid #ccc;
+	  border-radius: 4px;
+      }
 
-.slide figcaption {
-  font-size: 0.95rem;
-  color: #555;
-  margin-top: 0.5rem;
-  font-style: italic;
-}
+      .slide figcaption {
+	  font-size: 0.95rem;
+	  color: #555;
+	  margin-top: 0.5rem;
+	  font-style: italic;
+      }
 
-/* Next & Previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  transform: translateY(-50%);
-  padding: 8px 14px;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
-  font-weight: bold;
-  font-size: 16px;
-  border: none;
-  border-radius: 4px;
-  user-select: none;
-  transition: background-color 0.2s ease;
-}
+      /* Next & Previous buttons */
+      .prev, .next {
+	  cursor: pointer;
+	  position: absolute;
+	  top: 40%;
+	  transform: translateY(-50%);
+	  padding: 8px 14px;
+	  color: #fff;
+	  background-color: rgba(0, 0, 0, 0.5);
+	  font-weight: bold;
+	  font-size: 16px;
+	  border: none;
+	  border-radius: 4px;
+	  user-select: none;
+	  transition: background-color 0.2s ease;
+      }
 
-.next {
-  right: 0;
-}
+      .next {
+	  right: 0;
+      }
 
-.prev {
-  left: 0;
-}
+      .prev {
+	  left: 0;
+      }
 
-.prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.85);
-}
+      .prev:hover, .next:hover {
+	  background-color: rgba(0, 0, 0, 0.85);
+      }
 
-/* Fade animation transition */
-.fade {
-  animation: fadeEffect 0.4s;
-}
+      /* Fade animation transition */
+      .fade {
+	  animation: fadeEffect 0.4s;
+      }
 
-@keyframes fadeEffect {
-  from { opacity: 0.4; }
-  to { opacity: 1; }
-}
-</style>
+      @keyframes fadeEffect {
+	  from { opacity: 0.4; }
+	  to { opacity: 1; }
+      }
+    </style>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Filipe C. Thewes",
-  "url": "https://fthewes.github.io",
-  "jobTitle": "Academic Researcher",
-  "worksFor": {
-    "@type": "EducationalOrganization",
-    "name": "University of Luxembourg"
-  },
-  "sameAs": [
-    "https://scholar.google.com/citations?user=MUZJZEIAAAAJ&hl=en",
-    "https://orcid.org/0000-0002-6674-6505",
-    "linkedin.com/in/filipe-thewes"
-  ]
-}
-</script>
- 
-</head>
-<body>
-<header>
-<h1>Filipe C. Thewes</h1>
-<p>Postdoctoral researcher at the University of Luxembourg</p>
-<a href="https://scholar.google.com/citations?user=MUZJZEIAAAAJ&hl=en"> Google Scholar </a><br>
-<nav>
-<a href="#about">About</a>
-<a href="#publications">Recent publications</a>
-<a href="#cv">CV</a>
-<a href="#contact">Contact</a>
-</nav>
-</header>
-
-<!-- SLIDESHOW SECTION -->
-<section id="figures">
-  <div class="slideshow-container">
+    <script type="application/ld+json">
+      {
+	  "@context": "https://schema.org",
+	  "@type": "Person",
+	  "name": "Filipe C. Thewes",
+	  "url": "https://fthewes.github.io",
+	  "jobTitle": "Academic Researcher",
+	  "worksFor": {
+	      "@type": "EducationalOrganization",
+	      "name": "University of Luxembourg"
+	  },
+	  "sameAs": [
+	      "https://scholar.google.com/citations?user=MUZJZEIAAAAJ&hl=en",
+	      "https://orcid.org/0000-0002-6674-6505",
+	      "linkedin.com/in/filipe-thewes"
+	  ]
+      }
+    </script>
     
-    <!-- Figure 1 -->
-    <div class="slide fade">
-      <figure>
-        <img src="fig1.png" alt="Phase separation with non-local interactions">
-        <figcaption>Phase separation with non-local interactions results in patterns with different length scales.</figcaption>
-      </figure>
-    </div>
+  </head>
+  <body>
+    <header>
+      <h1>Filipe C. Thewes</h1>
+      <p>Postdoctoral researcher at the University of Luxembourg</p>
+      <a href="https://scholar.google.com/citations?user=MUZJZEIAAAAJ&hl=en"> Google Scholar </a><br>
+      <nav>
+	<a href="#about">About</a>
+	<a href="#publications">Recent publications</a>
+	<a href="#cv">CV</a>
+	<a href="#contact">Contact</a>
+      </nav>
+    </header>
 
-    <!-- Figure 2 -->
-    <div class="slide fade">
-      <figure>
-        <img src="fig2.png" alt="Composition imbalance amplification">
-        <figcaption>Composition imbalance amplification in multicomponent mixtures with random interactions. </figcaption>
-      </figure>
-    </div>
+    <!-- SLIDESHOW SECTION -->
+    <section id="figures">
+      <div class="slideshow-container">
+	
+	<!-- Figure 1 -->
+	<div class="slide fade">
+	  <figure>
+            <img src="images/nonLocal.png" alt="Phase separation with non-local interactions">
+            <figcaption>Phase separation with non-local interactions.</figcaption>
+	  </figure>
+	</div>
 
-    <!-- Navigation Buttons -->
-    <button class="prev" onclick="changeSlide(-1)" aria-label="Previous Slide">&#10094;</button>
-    <button class="next" onclick="changeSlide(1)" aria-label="Next Slide">&#10095;</button>
+	<!-- Figure 2 -->
+	<div class="slide fade">
+	  <figure>
+            <img src="images/interfDesign.png" alt="Interface design">
+            <figcaption>Interface design in multicomponent mixtures </figcaption>
+	  </figure>
+	</div>
 
-  </div>
-</section>
- 
-<section id="about">
+	<div class="slide fade">
+	  <figure>
+            <img src="images/schematic3.pdf" alt="Tracer dynamics">
+            <figcaption>Tracer dynamics in chemically active mixtures </figcaption>
+	  </figure>
+	</div>
 
-<h2>About Me</h2>
-<p>
-I am interested in the physics of complex systems in and out of equilibrium. In particular, I try to understand the behaviour of fluid mixtures with many different chemical components, where the free energy landscape becomes high-dimensional and kinetics can become counter-intuitive.  I approach these problems using theoretical tools such as statistical field theories, stochastic thermodynamics, random matrices, path integrals, and test predictions using numerical methods. I am currently very interested in optimizing heat dissipation in non-equilibrium mixtures, and in optimizing information storage/transfer using driven liquid-liquid phase separation.
-</p>
-<p>
-My current projects include:
-</p>
-<ul>
-<li>Optimal control of non-equilibrium field theories</li>
-<li>Phase separation in ferroelectrics</li>
-<li>Active engines</li>
-</ul>
+	<!-- Navigation Buttons -->
+	<button class="prev" onclick="changeSlide(-1)" aria-label="Previous Slide">&#10094;</button>
+	<button class="next" onclick="changeSlide(1)" aria-label="Next Slide">&#10095;</button>
 
-</section>
+      </div>
+    </section>
+    
+    <section id="about">
 
-<section id="publications">
- 
-<h2>Recent publications and pre-prints</h2>
-<p>
-<ul>
-       <a href="https://arxiv.org/abs/2609.29416" target="_blank"><b>Speed up of passive tracers in mixtures with active chemical reactions</b></a>
-                    <br> FC Thewes, C Luo, and D Zwicker
-                <br><br>
-     <a href="https://journals.aps.org/prresearch/abstract/10.1103/gdwt-v9yj" target="_blank"><b>Phase separation with nonlocal interactions</b></a>
-                    <br> FC Thewes, Y Qiang, OW Paulin, and D Zwicker
-                <br><br>
-                <a href="https://journals.aps.org/pre/abstract/10.1103/z6v8-pmm9" target="_blank"><b>Ensemble inequivalence in the design of mixtures with super-Gibbs phase coexistence</b></a>
-                    <br> FC Thewes, and P Sollich    
-   <br><br>
-   <a href="https://iopscience.iop.org/article/10.1209/0295-5075/ad60f3/meta" target="_blank"><b>Mobility-induced kinetic effects in multicomponent mixtures</b></a>
-                    <br> FC Thewes, M Krüger and P Sollich        
-    <br><br>
-                <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.131.058401" target="_blank"><b>Composition Dependent Instabilities in Mixtures with Many Components (Editor's suggestion)</b></a>
-                    <br> FC Thewes, M Krüger, and P Sollich
-            </ul>
-</section>
+      <h2>About Me</h2>
+      <p>
+	I am interested in the physics of complex systems in and out of equilibrium. In particular, I try to understand the behaviour of fluid mixtures with many different chemical components, where the free energy landscape becomes high-dimensional and kinetics can become counter-intuitive.  I approach these problems using theoretical tools such as statistical field theories, stochastic thermodynamics, random matrices, path integrals, and test predictions using numerical methods. I am currently very interested in optimizing heat dissipation in non-equilibrium mixtures, and in optimizing information storage/transfer using driven liquid-liquid phase separation.
+      </p>
+      <p>
+	My current projects include:
+      </p>
+      <ul>
+	<li>Optimal control of non-equilibrium field theories</li>
+	<li>Phase separation in ferroelectrics</li>
+	<li>Active engines</li>
+      </ul>
 
+    </section>
 
-<section id="cv">
-<h2>Curriculum Vitae</h2>
-<p>
-You can view my full CV <a href="cv.pdf">here (PDF)</a>.
-</p>
-</section>
-
-
-<section id="contact">
-<h2>Contact</h2>
-<p>
-Email: <a href="mailto:filipe.dacunhathewes@uni.lu">filipe.dacunhathewes@uni.lu</a><br>
-<!--GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a><br>-->
-LinkedIn: <a href="https://www.linkedin.com/in/filipe-thewes/">linkedin.com/in/filipe-thewes</a>
-</p>
-</section>
+    <section id="publications">
+      
+      <h2>Recent publications and pre-prints</h2>
+      <p>
+	<ul>
+	  <a href="https://arxiv.org/abs/2609.29416" target="_blank"><b>Speed up of passive tracers in mixtures with active chemical reactions</b></a>
+          <br> FC Thewes, C Luo, and D Zwicker
+          <br><br>
+	  <a href="https://journals.aps.org/prresearch/abstract/10.1103/gdwt-v9yj" target="_blank"><b>Phase separation with nonlocal interactions</b></a>
+          <br> FC Thewes, Y Qiang, OW Paulin, and D Zwicker
+          <br><br>
+          <a href="https://journals.aps.org/pre/abstract/10.1103/z6v8-pmm9" target="_blank"><b>Ensemble inequivalence in the design of mixtures with super-Gibbs phase coexistence</b></a>
+          <br> FC Thewes, and P Sollich    
+	  <br><br>
+	  <a href="https://iopscience.iop.org/article/10.1209/0295-5075/ad60f3/meta" target="_blank"><b>Mobility-induced kinetic effects in multicomponent mixtures</b></a>
+          <br> FC Thewes, M Krüger and P Sollich        
+	  <br><br>
+          <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.131.058401" target="_blank"><b>Composition Dependent Instabilities in Mixtures with Many Components (Editor's suggestion)</b></a>
+          <br> FC Thewes, M Krüger, and P Sollich
+        </ul>
+    </section>
 
 
-<footer>
-<p>&copy; 2025 Filipe Thewes</p>
-</footer>
+    <section id="cv">
+      <h2>Curriculum Vitae</h2>
+      <p>
+	You can view my full CV <a href="cv.pdf">here (PDF)</a>.
+      </p>
+    </section>
 
-<!-- SLIDESHOW JAVASCRIPT -->
-<script>
-let currentSlideIndex = 0;
-showSlide(currentSlideIndex);
 
-function changeSlide(n) {
-  showSlide(currentSlideIndex += n);
-}
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+	Email: <a href="mailto:filipe.dacunhathewes@uni.lu">filipe.dacunhathewes@uni.lu</a><br>
+	<!--GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a><br>-->
+	LinkedIn: <a href="https://www.linkedin.com/in/filipe-thewes/">linkedin.com/in/filipe-thewes</a>
+      </p>
+    </section>
 
-function showSlide(index) {
-  const slides = document.getElementsByClassName("slide");
-  
-  if (index >= slides.length) { currentSlideIndex = 0; }
-  if (index < 0) { currentSlideIndex = slides.length - 1; }
 
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
+    <footer>
+      <p>&copy; 2025 Filipe Thewes</p>
+    </footer>
 
-  slides[currentSlideIndex].style.display = "block";
-}
-</script>
+    <!-- SLIDESHOW JAVASCRIPT -->
+    <script>
+      let currentSlideIndex = 0;
+      showSlide(currentSlideIndex);
 
-</body>
+      function changeSlide(n) {
+	  showSlide(currentSlideIndex += n);
+      }
+
+      function showSlide(index) {
+	  const slides = document.getElementsByClassName("slide");
+	  
+	  if (index >= slides.length) { currentSlideIndex = 0; }
+	  if (index < 0) { currentSlideIndex = slides.length - 1; }
+
+	  for (let i = 0; i < slides.length; i++) {
+	      slides[i].style.display = "none";
+	  }
+
+	  slides[currentSlideIndex].style.display = "block";
+      }
+    </script>
+
+  </body>
 </html>
