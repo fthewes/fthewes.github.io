@@ -7,6 +7,9 @@
     <meta name="robots" content="index, follow">
     <title>Filipe Thewes </title>
     <style>
+      html {
+	  scroll-behavior: smooth;
+      }
       body {
 	  font-family: Georgia, serif;
 	  max-width: 1000px;
@@ -24,13 +27,22 @@
 	  font-size: 2rem;
       }
       nav {
+	  position: sticky;
+	  top: 0;
+	  background-color: #ffffff; /* Ensures page content doesn't show through as you scroll */
+	  padding: 0.75rem 0;
 	  margin-top: 1rem;
-      }
-      nav a {
-	  margin: 0 0.5rem;
-	  text-decoration: none;
-	  color: #0066cc;
-      }
+	  border-bottom: 1px solid #eaeaea; /* Adds a clean separator line when scrolling */
+	  z-index: 1000; /* Keeps nav on top of images and figure overlays */
+	  }
+	   
+	   /* Optional: Keep links aligned nicely */
+	   nav a {
+	       margin: 0 0.75rem;
+	       text-decoration: none;
+	       color: #0066cc;
+	       font-weight: 500;
+	   }
       section {
 	  margin-bottom: 2rem;
       }
@@ -137,13 +149,13 @@
       <h1>Filipe C. Thewes</h1>
       <p>Postdoctoral researcher at the University of Luxembourg</p>
       <a href="https://scholar.google.com/citations?user=MUZJZEIAAAAJ&hl=en"> Google Scholar </a><br>
-      <nav>
+    </header>
+    <nav>
 	<a href="#about">About</a>
 	<a href="#publications">Recent publications</a>
 	<a href="#cv">CV</a>
 	<a href="#contact">Contact</a>
-      </nav>
-    </header>
+    </nav>
 
     <!-- SLIDESHOW SECTION -->
     <section id="figures">
@@ -182,6 +194,8 @@
     <section id="about">
 
       <h2>About Me</h2>
+      <p> Non-equilibrium Statistical Mechanics, Phase Separation, Multicomponent Mixtures.
+      Keywords: 
       <p>
 	I am interested in the physics of complex systems in and out of equilibrium. In particular, I try to understand the behaviour of fluid mixtures with many different chemical components, where the free energy landscape becomes high-dimensional and kinetics can become counter-intuitive.  I approach these problems using theoretical tools such as statistical field theories, stochastic thermodynamics, random matrices, path integrals, and test predictions using numerical methods. I am currently very interested in optimizing heat dissipation in non-equilibrium mixtures, and in optimizing information storage/transfer using driven liquid-liquid phase separation.
       </p>
@@ -230,7 +244,7 @@
     <section id="contact">
       <h2>Contact</h2>
       <p>
-	Email: <a href="mailto:filipe.dacunhathewes@uni.lu">filipe.dacunhathewes@uni.lu</a><br>
+	Email:<a href="mailto:filipe.dacunhathewes@uni.lu">filipe.dacunhathewes@uni.lu</a><br>
 	<!--GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a><br>-->
 	LinkedIn: <a href="https://www.linkedin.com/in/filipe-thewes/">linkedin.com/in/filipe-thewes</a>
       </p>
