@@ -40,27 +40,76 @@ text-align: center;
 color: #777;
 margin-top: 3rem;
 }
- .figure-row {
-  display: flex;
-  gap: 1rem;           /* space between figures */
-}
-
-.figure-row figure {
-  flex: 1;             /* each figure takes half the row */
-  text-align: center;  /* center captions */
-}
-
-.figure-row img {
-  width: 100%;         /* make image fill half page */
-  height: auto;
-  border: 1px solid #ccc; /* optional: subtle border */
-  border-radius: 4px;     /* optional: rounded corners */
-}
 
 #about p {
   text-align: justify;
 }
 
+/* --- SLIDESHOW STYLES --- */
+.slideshow-container {
+  max-width: 650px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.slide {
+  display: none; /* Hidden by default */
+  text-align: center;
+}
+
+.slide img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.slide figcaption {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* Next & Previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  padding: 8px 14px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+
+.next {
+  right: 0;
+}
+
+.prev {
+  left: 0;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+/* Fade animation transition */
+.fade {
+  animation: fadeEffect 0.4s;
+}
+
+@keyframes fadeEffect {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
 </style>
 
 <script type="application/ld+json">
@@ -96,19 +145,30 @@ margin-top: 3rem;
 </nav>
 </header>
 
+<!-- SLIDESHOW SECTION -->
 <section id="figures">
-<section id="figures">
-  <div class="figure-row">
-    <figure>
-     <img src="fig1.png" alt="Snow" style="width:60%">
-     <!--<figcaption> Phase separation with non-local interactions results in patterns with different length scales </figcaption> !-->
-    </figure>
-	  <!--
-    <figure>
-     <img src="fig2.png" alt="Forest" style="width:100%">
-     <figcaption> Composition imbalance amplification in multicomponent mixtures with random interactions. While yellow is only 5% of the mixture (all other 99 components are 0.95% each), it controls the onset of phase separation.  </figcaption>
-    </figure>
-	  !-->
+  <div class="slideshow-container">
+    
+    <!-- Figure 1 -->
+    <div class="slide fade">
+      <figure>
+        <img src="fig1.png" alt="Phase separation with non-local interactions">
+        <figcaption>Phase separation with non-local interactions results in patterns with different length scales.</figcaption>
+      </figure>
+    </div>
+
+    <!-- Figure 2 -->
+    <div class="slide fade">
+      <figure>
+        <img src="fig2.png" alt="Composition imbalance amplification">
+        <figcaption>Composition imbalance amplification in multicomponent mixtures with random interactions. </figcaption>
+      </figure>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <button class="prev" onclick="changeSlide(-1)" aria-label="Previous Slide">&#10094;</button>
+    <button class="next" onclick="changeSlide(1)" aria-label="Next Slide">&#10095;</button>
+
   </div>
 </section>
  
@@ -134,21 +194,21 @@ My current projects include:
 <h2>Recent publications and pre-prints</h2>
 <p>
 <ul>
- 	  <a href="https://arxiv.org/abs/2609.29416" target="_blank"><b>Speed up of passive tracers in mixtures with active chemical reactions</b></a>
-					<br> FC Thewes, C Luo, and D Zwicker
-				<br><br>
+       <a href="https://arxiv.org/abs/2609.29416" target="_blank"><b>Speed up of passive tracers in mixtures with active chemical reactions</b></a>
+                    <br> FC Thewes, C Luo, and D Zwicker
+                <br><br>
      <a href="https://journals.aps.org/prresearch/abstract/10.1103/gdwt-v9yj" target="_blank"><b>Phase separation with nonlocal interactions</b></a>
-					<br> FC Thewes, Y Qiang, OW Paulin, and D Zwicker
-				<br><br>
-				<a href="https://journals.aps.org/pre/abstract/10.1103/z6v8-pmm9" target="_blank"><b>Ensemble inequivalence in the design of mixtures with super-Gibbs phase coexistence</b></a>
-					<br> FC Thewes, and P Sollich	
+                    <br> FC Thewes, Y Qiang, OW Paulin, and D Zwicker
+                <br><br>
+                <a href="https://journals.aps.org/pre/abstract/10.1103/z6v8-pmm9" target="_blank"><b>Ensemble inequivalence in the design of mixtures with super-Gibbs phase coexistence</b></a>
+                    <br> FC Thewes, and P Sollich    
    <br><br>
    <a href="https://iopscience.iop.org/article/10.1209/0295-5075/ad60f3/meta" target="_blank"><b>Mobility-induced kinetic effects in multicomponent mixtures</b></a>
-					<br> FC Thewes, M Krüger and P Sollich		
+                    <br> FC Thewes, M Krüger and P Sollich        
     <br><br>
-				<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.131.058401" target="_blank"><b>Composition Dependent Instabilities in Mixtures with Many Components (Editor's suggestion)</b></a>
-					<br> FC Thewes, M Krüger, and P Sollich
-			</ul>
+                <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.131.058401" target="_blank"><b>Composition Dependent Instabilities in Mixtures with Many Components (Editor's suggestion)</b></a>
+                    <br> FC Thewes, M Krüger, and P Sollich
+            </ul>
 </section>
 
 
@@ -163,7 +223,7 @@ You can view my full CV <a href="cv.pdf">here (PDF)</a>.
 <section id="contact">
 <h2>Contact</h2>
 <p>
-Email: <a href="filipe.dacunhathewes@uni.lu">filipe.dacunhathewes@uni.lu</a><br>
+Email: <a href="mailto:filipe.dacunhathewes@uni.lu">filipe.dacunhathewes@uni.lu</a><br>
 <!--GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a><br>-->
 LinkedIn: <a href="https://www.linkedin.com/in/filipe-thewes/">linkedin.com/in/filipe-thewes</a>
 </p>
@@ -173,5 +233,29 @@ LinkedIn: <a href="https://www.linkedin.com/in/filipe-thewes/">linkedin.com/in/f
 <footer>
 <p>&copy; 2025 Filipe Thewes</p>
 </footer>
+
+<!-- SLIDESHOW JAVASCRIPT -->
+<script>
+let currentSlideIndex = 0;
+showSlide(currentSlideIndex);
+
+function changeSlide(n) {
+  showSlide(currentSlideIndex += n);
+}
+
+function showSlide(index) {
+  const slides = document.getElementsByClassName("slide");
+  
+  if (index >= slides.length) { currentSlideIndex = 0; }
+  if (index < 0) { currentSlideIndex = slides.length - 1; }
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slides[currentSlideIndex].style.display = "block";
+}
+</script>
+
 </body>
 </html>
