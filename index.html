@@ -124,6 +124,38 @@
 	  from { opacity: 0.4; }
 	  to { opacity: 1; }
       }
+      /* Container for photo + text */
+      .about-container {
+	  display: flex;
+	  gap: 2rem;
+	  align-items: flex-start;
+      }
+
+      /* Headshot styling */
+      .profile-photo {
+	  width: 200px; /* Standard portrait width */
+	  height: auto;
+	  border-radius: 6px; /* Subtle rounded edges; use 50% for a circular photo */
+	  border: 1px solid #ddd;
+	  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+	  flex-shrink: 0; /* Prevents photo from shrinking */
+      }
+
+      .about-text {
+	  flex: 1;
+      }
+
+      /* Mobile responsive layout (stacks vertically on smaller screens) */
+      @media (max-width: 650px) {
+	  .about-container {
+	      flex-direction: column;
+	      align-items: center;
+	  }
+
+	  .profile-photo {
+	      width: 180px;
+	  }
+      }
     </style>
 
     <script type="application/ld+json">
@@ -192,25 +224,30 @@
 
       </div>
     </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      
+      <div class="about-container">
+	<!-- Your Profile Photo -->
+	<img src="images/filipe-thewes.jpg" alt="Filipe C. Thewes" class="profile-photo">
+
+	<!-- Bio Text -->
+	<div class="about-text">
+	  <p>
+            I am interested in the physics of complex systems in and out of equilibrium. In particular, I try to understand the behaviour of fluid mixtures with many different chemical components, where the free energy landscape becomes high-dimensional and kinetics can become counter-intuitive. I approach these problems using theoretical tools such as statistical field theories, stochastic thermodynamics, random matrices, path integrals, and test predictions using numerical methods. I am currently very interested in optimizing heat dissipation in non-equilibrium mixtures, and in optimizing information storage/transfer using driven liquid-liquid phase separation.
+	  </p>
+	  <p>My current projects include:</p>
+	  <ul>
+            <li>Optimal control of non-equilibrium field theories</li>
+            <li>Phase separation in ferroelectrics</li>
+            <li>Active engines</li>
+	  </ul>
+	</div>
+      </div>
+    </section>
     
     <section id="about">
-
-      <h2>About Me</h2>
-      <p> 
-      Keywords: Non-equilibrium Statistical Mechanics, Phase Separation, Multicomponent Mixtures.
-      <p>
-	I am interested in the physics of complex systems in and out of equilibrium. In particular, I try to understand the behaviour of fluid mixtures with many different chemical components, where the free energy landscape becomes high-dimensional and kinetics can become counter-intuitive.  I approach these problems using theoretical tools such as statistical field theories, stochastic thermodynamics, random matrices, path integrals, and test predictions using numerical methods. I am currently very interested in optimizing heat dissipation in non-equilibrium mixtures, and in optimizing information storage/transfer using driven liquid-liquid phase separation.
-      </p>
-      <p>
-	My current projects include:
-      </p>
-      <ul>
-	<li>Optimal control of non-equilibrium field theories</li>
-	<li>Phase separation in ferroelectrics</li>
-	<li>Active engines</li>
-      </ul>
-
-    </section>
 
     <section id="publications">
       
