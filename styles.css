@@ -1,0 +1,214 @@
+/* Global layout and typography */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Georgia, serif;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+h2 {
+  margin-top: 2rem;
+}
+
+/* Navigation (shared across pages) */
+nav {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff; /* Prevent content showing through on scroll */
+  padding: 0.75rem 0;
+  margin-top: 1rem;
+  border-bottom: 1px solid #eaeaea; /* Subtle separator */
+  z-index: 1000; /* Keep nav above figures/images */
+  text-align: center;
+}
+
+nav a {
+  display: inline-block;
+  margin: 0 0.75rem;
+  text-decoration: none;
+  color: #0066cc;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+footer {
+  font-size: 0.9rem;
+  text-align: center;
+  color: #777;
+  margin-top: 3rem;
+}
+
+/* About section layout: photo + text */
+#about p {
+  text-align: justify;
+}
+
+.about-container {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.profile-photo {
+  width: 200px;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+}
+
+.about-text {
+  flex: 1;
+}
+
+/* Remove top margin from first paragraph in the bio */
+.about-text p:first-child {
+  margin-top: 0;
+}
+
+/* Mobile responsiveness for about section */
+@media (max-width: 650px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-photo {
+    width: 180px;
+  }
+}
+
+/* --- Slideshow styles (used on index page) --- */
+.slideshow-container {
+  max-width: 650px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.slide {
+  display: none; /* Hidden by default */
+  text-align: center;
+}
+
+.slide img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.slide figcaption {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* Next & Previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  padding: 8px 14px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+
+.next {
+  right: 0;
+}
+
+.prev {
+  left: 0;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+/* Fade animation transition */
+.fade {
+  animation: fadeEffect 0.4s;
+}
+
+@keyframes fadeEffect {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+/* --- Publications page helpers --- */
+.pub-year {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.pub-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.pub-list li {
+  margin-bottom: 1rem;
+}
+
+.pub-title {
+  font-weight: bold;
+}
+
+.pub-links a {
+  margin-right: 0.5rem;
+}
+
+/* --- Notes page helpers --- */
+.notes-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.notes-list li {
+  margin-bottom: 1rem;
+}
+
+.note-title {
+  font-weight: bold;
+}
+
+.note-meta {
+  font-size: 0.9rem;
+  color: #666;
+}

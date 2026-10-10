@@ -6,161 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
     <title>Filipe C. Thewes </title>
-    <style>
-      html {
-	  scroll-behavior: smooth;
-      }
-      body {
-	  font-family: Georgia, serif;
-	  max-width: 1000px;
-	  margin: 2rem auto;
-	  padding: 0 1rem;
-	  line-height: 1.6;
-	  color: #333;
-      }
-      header {
-	  text-align: center;
-	  margin-bottom: 2rem;
-      }
-      h1 {
-	  margin: 0;
-	  font-size: 2rem;
-      }
-      nav {
-	  position: sticky;
-	  top: 0;
-	  background-color: #ffffff; /* Ensures page content doesn't show through as you scroll */
-	  padding: 0.75rem 0;
-	  margin-top: 1rem;
-	  border-bottom: 1px solid #eaeaea; /* Adds a clean separator line when scrolling */
-	  z-index: 1000; /* Keeps nav on top of images and figure overlays */
-	  text-align: center;
-	  }
-	   
-	   /* Optional: Keep links aligned nicely */
-	   nav a {
-	       display: inline-block; /* Helps with spacing and alignment */
-	       margin: 0 0.75rem;
-	       text-decoration: none;
-	       color: #0066cc;
-	       font-weight: 500;
-	   }
-      section {
-	  margin-bottom: 2rem;
-      }
-      footer {
-	  font-size: 0.9rem;
-	  text-align: center;
-	  color: #777;
-	  margin-top: 3rem;
-      }
-
-      #about p {
-	  text-align: justify;
-      }
-
-      /* --- SLIDESHOW STYLES --- */
-      .slideshow-container {
-	  max-width: 650px;
-	  position: relative;
-	  margin: 0 auto;
-      }
-
-      .slide {
-	  display: none; /* Hidden by default */
-	  text-align: center;
-      }
-
-      .slide img {
-	  width: 100%;
-	  max-width: 600px;
-	  height: auto;
-	  border: 1px solid #ccc;
-	  border-radius: 4px;
-      }
-
-      .slide figcaption {
-	  font-size: 0.95rem;
-	  color: #555;
-	  margin-top: 0.5rem;
-	  font-style: italic;
-      }
-
-      /* Next & Previous buttons */
-      .prev, .next {
-	  cursor: pointer;
-	  position: absolute;
-	  top: 40%;
-	  transform: translateY(-50%);
-	  padding: 8px 14px;
-	  color: #fff;
-	  background-color: rgba(0, 0, 0, 0.5);
-	  font-weight: bold;
-	  font-size: 16px;
-	  border: none;
-	  border-radius: 4px;
-	  user-select: none;
-	  transition: background-color 0.2s ease;
-      }
-
-      .next {
-	  right: 0;
-      }
-
-      .prev {
-	  left: 0;
-      }
-
-      .prev:hover, .next:hover {
-	  background-color: rgba(0, 0, 0, 0.85);
-      }
-
-      /* Fade animation transition */
-      .fade {
-	  animation: fadeEffect 0.4s;
-      }
-
-      @keyframes fadeEffect {
-	  from { opacity: 0.4; }
-	  to { opacity: 1; }
-      }
-      /* Container for photo + text */
-      .about-container {
-	  display: flex;
-	  gap: 2rem;
-	  align-items: flex-start;
-      }
-
-      /* Headshot styling */
-      .profile-photo {
-	  width: 200px; /* Standard portrait width */
-	  height: auto;
-	  border-radius: 6px; /* Subtle rounded edges; use 50% for a circular photo */
-	  border: 1px solid #ddd;
-	  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-	  flex-shrink: 0; /* Prevents photo from shrinking */
-      }
-
-      .about-text {
-	  flex: 1;
-      }
-
-      /* Mobile responsive layout (stacks vertically on smaller screens) */
-      @media (max-width: 650px) {
-	  .about-container {
-	      flex-direction: column;
-	      align-items: center;
-	  }
-
-	  .profile-photo {
-	      width: 180px;
-	  }
-      }
-      /* Removes top margin from the first paragraph in your bio text */
-      .about-text p:first-child {
-	  margin-top: 0;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 
     <script type="application/ld+json">
       {
@@ -189,10 +35,11 @@
       <a href="https://scholar.google.com/citations?user=MUZJZEIAAAAJ&hl=en"> Google Scholar </a><br>
     </header>
     <nav>
-	<a href="#about">About</a>
-	<a href="#publications">Recent publications</a>
-	<a href="#cv">CV</a>
-	<a href="#contact">Contact</a>
+      <a href="index.html#about">About</a>
+      <a href="publications.html">Publications</a>
+      <a href="notes.html">Notes</a>
+      <a href="index.html#cv">CV</a>
+      <a href="index.html#contact">Contact</a>
     </nav>
 
     <!-- SLIDESHOW SECTION -->
@@ -249,6 +96,9 @@
             <li>Phase separation in ferroelectrics</li>
             <li>Active engines</li>
 	  </ul>
+	  <p>
+	    You can view my full CV <a href="cv.pdf">here (PDF)</a>.
+	  </p>
 	</div>
       </div>
     </section>
@@ -278,14 +128,6 @@
     </section>
 
 
-    <section id="cv">
-      <h2>Curriculum Vitae</h2>
-      <p>
-	You can view my full CV <a href="cv.pdf">here (PDF)</a>.
-      </p>
-    </section>
-
-
     <section id="contact">
       <h2>Contact</h2>
       <p>
@@ -294,11 +136,6 @@
 	LinkedIn: <a href="https://www.linkedin.com/in/filipe-thewes/">linkedin.com/in/filipe-thewes</a>
       </p>
     </section>
-
-
-    <footer>
-      <p>&copy; 2025 Filipe Thewes</p>
-    </footer>
 
     <!-- SLIDESHOW JAVASCRIPT -->
     <script>
