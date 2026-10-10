@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /drafts/
+Allow: /
+
+Sitemap: https://fthewes.github.io/sitemap.xml
